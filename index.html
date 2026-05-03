@@ -419,10 +419,12 @@ footer{margin-top:48px;padding-top:16px;border-top:.5px solid var(--bd);font-fam
 
 <!-- BLUEPRINT PAGE -->
 <div class="page-section" id="page-bp">
-<div class="bp-top">
-  <div id="bp-filter" style="display:flex;gap:4px;flex-wrap:wrap;flex:1"></div>
+<div style="display:flex;flex-direction:column;gap:8px;margin-bottom:20px">
+  <div style="display:flex;align-items:center;gap:8px">
+    <div id="bp-filter" style="display:flex;gap:4px;flex-wrap:wrap;flex:1"></div>
+    <button class="pin-add-btn" onclick="toggleBpForm()">+ เพิ่ม</button>
+  </div>
   <input class="bp-search" id="bp-search" placeholder="🔍 ค้นหา..." oninput="rBpList()">
-  <button class="pin-add-btn" onclick="toggleBpForm()">+ เพิ่ม</button>
 </div>
 <div id="bp-form-wrap"></div>
 <div class="bp-list" id="bp-list"></div>
