@@ -1,0 +1,1023 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>My 2-Month Plan</title>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Thai:wght@300;400;500&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#0d0d0f;--bg2:#131316;--bg3:#1a1a1f;
+  --bd:rgba(255,255,255,0.07);--bd2:rgba(255,255,255,0.13);
+  --tx:#e8e6e0;--mu:#7a7870;--hi:#4a4845;
+  --ac:#c8a96e;--ac2:#8b6d3f;--gr:#4a7c5f;--gl:#6ab584;--re:#7c4a4a;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+body{background:var(--bg);color:var(--tx);font-family:'Noto Sans Thai',sans-serif;font-weight:300;min-height:100vh}
+.noise{position:fixed;inset:0;pointer-events:none;z-index:0;opacity:0.03;background-image:url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");background-size:200px}
+.app{position:relative;z-index:1;max-width:960px;margin:0 auto;padding:48px 24px 80px}
+header{margin-bottom:40px}
+.htag{font-family:'Space Mono',monospace;font-size:11px;color:var(--ac);letter-spacing:.15em;text-transform:uppercase;margin-bottom:12px}
+h1{font-size:32px;font-weight:300;letter-spacing:-.02em}
+h1 span{color:var(--ac)}
+.hsub{font-size:13px;color:var(--mu);margin-top:8px;line-height:1.6}
+.sg{display:grid;grid-template-columns:repeat(4,1fr);gap:8px;margin-bottom:24px}
+.sc{background:var(--bg2);border:.5px solid var(--bd);border-radius:8px;padding:14px 16px}
+.sn{font-family:'Space Mono',monospace;font-size:22px}
+.sn.a{color:var(--ac)}
+.sl{font-size:11px;color:var(--mu);margin-top:3px}
+.pw{margin-bottom:28px}
+.pm{display:flex;justify-content:space-between;font-size:11px;color:var(--mu);margin-bottom:6px;font-family:'Space Mono',monospace}
+.pb{height:2px;background:var(--bd2);border-radius:99px}
+.pf{height:100%;border-radius:99px;background:var(--ac);transition:width .4s}
+.wn{display:flex;gap:4px;flex-wrap:wrap;margin-bottom:20px}
+.wtab{font-family:'Space Mono',monospace;font-size:11px;padding:6px 12px;border-radius:4px;border:.5px solid var(--bd);background:transparent;color:var(--mu);cursor:pointer;transition:all .15s;letter-spacing:.05em}
+.wtab:hover{border-color:var(--bd2);color:var(--tx)}
+.wtab.on{border-color:var(--ac2);background:rgba(200,169,110,.08);color:var(--ac)}
+.whi{margin-bottom:16px}
+.wnum{font-family:'Space Mono',monospace;font-size:11px;color:var(--ac);letter-spacing:.1em;margin-bottom:4px}
+.wtit{font-size:20px;font-weight:400;cursor:text;display:inline-block;border-radius:3px}
+.wtit:hover{background:rgba(200,169,110,.05)}
+.wtit[contenteditable=true]{outline:none;border-bottom:1px dashed var(--ac2);background:rgba(200,169,110,.07)!important}
+.wdates{font-family:'Space Mono',monospace;font-size:11px;color:var(--hi);margin:4px 0 12px}
+.warn{border-left:1.5px solid var(--re);padding:10px 14px;background:rgba(124,74,74,.08);border-radius:0 6px 6px 0;margin-bottom:12px}
+.wl{font-family:'Space Mono',monospace;font-size:10px;color:#c47a7a;letter-spacing:.1em;text-transform:uppercase;margin-bottom:4px}
+.wt2{font-size:13px;color:var(--mu);line-height:1.6;cursor:text;display:block;border-radius:3px}
+.wt2:hover{background:rgba(200,169,110,.04)}
+.wt2[contenteditable=true]{outline:none;border-bottom:1px dashed var(--ac2);background:rgba(200,169,110,.05)!important}
+.note-box{border-left:1.5px solid var(--ac2);padding:10px 14px;background:rgba(200,169,110,.04);border-radius:0 6px 6px 0;margin-bottom:16px}
+.nl{font-family:'Space Mono',monospace;font-size:10px;color:var(--ac);letter-spacing:.1em;text-transform:uppercase;margin-bottom:4px}
+.nt{font-size:12px;color:var(--mu);line-height:1.6;cursor:text;display:block;border-radius:3px}
+.nt:hover{background:rgba(200,169,110,.04)}
+.nt[contenteditable=true]{outline:none;border-bottom:1px dashed var(--ac2);background:rgba(200,169,110,.05)!important}
+/* week personal note */
+.week-note-wrap{margin-bottom:20px}
+.week-note-box{border:.5px solid var(--bd);border-radius:8px;background:var(--bg2);overflow:hidden}
+.week-note-hdr{display:flex;align-items:center;gap:8px;padding:8px 14px;border-bottom:.5px solid var(--bd);background:var(--bg3)}
+.week-note-label{font-family:'Space Mono',monospace;font-size:10px;color:var(--ac);letter-spacing:.12em;text-transform:uppercase}
+.week-note-body{padding:10px 14px}
+.week-note-text{font-size:13px;width:100%;min-height:60px;background:transparent;border:none;outline:none;resize:none;font-family:'Noto Sans Thai',sans-serif;font-weight:300;color:var(--tx);line-height:1.7}
+.week-note-text::placeholder{color:var(--hi);font-style:italic}
+.view-toggle{display:flex;gap:4px;margin-bottom:20px;align-items:center}
+.vl{font-family:'Space Mono',monospace;font-size:11px;color:var(--hi);margin-right:4px}
+.vb{font-family:'Space Mono',monospace;font-size:11px;padding:5px 14px;border-radius:4px;border:.5px solid var(--bd);background:transparent;color:var(--mu);cursor:pointer;transition:all .15s}
+.vb:hover{border-color:var(--bd2);color:var(--tx)}
+.vb.on{border-color:var(--ac2);background:rgba(200,169,110,.08);color:var(--ac)}
+.fr{display:flex;gap:6px;flex-wrap:wrap;align-items:center;margin-bottom:20px}
+.fl{font-size:11px;color:var(--hi);font-family:'Space Mono',monospace;margin-right:4px}
+.fb{font-size:11px;padding:4px 10px;border-radius:99px;border:.5px solid var(--bd);background:transparent;color:var(--mu);cursor:pointer;transition:all .15s;font-family:'Noto Sans Thai',sans-serif}
+.fb:hover{border-color:var(--bd2);color:var(--tx)}
+.fb.on{color:var(--tx);border-color:var(--bd2);background:var(--bg3)}
+.wp{display:flex;align-items:center;gap:8px;margin-bottom:20px}
+.wpb{flex:1;height:2px;background:var(--bd);border-radius:99px}
+.wpf{height:100%;border-radius:99px;background:var(--ac2);transition:width .3s}
+.wpl{font-family:'Space Mono',monospace;font-size:11px;color:var(--mu);min-width:32px;text-align:right}
+.eh{font-size:11px;color:var(--hi);font-family:'Space Mono',monospace;margin-bottom:16px}
+/* tasks */
+.ss{margin-bottom:20px}
+.sh{display:flex;align-items:center;gap:10px;margin-bottom:10px;padding-bottom:8px;border-bottom:.5px solid var(--bd)}
+.sb{font-family:'Space Mono',monospace;font-size:10px;font-weight:700;padding:3px 8px;border-radius:3px;letter-spacing:.05em}
+.sb.S{background:rgba(74,124,95,.15);color:#6ab584}
+.sb.M{background:rgba(107,90,138,.15);color:#a090c8}
+.sb.L{background:rgba(180,120,60,.15);color:#d4a464}
+.si{font-size:12px;color:var(--mu)}
+.sc2{font-family:'Space Mono',monospace;font-size:11px;color:var(--hi);margin-left:auto}
+.tl{display:flex;flex-direction:column;gap:3px}
+.task{display:flex;align-items:flex-start;gap:10px;padding:9px 12px;border-radius:6px;border:.5px solid var(--bd);background:var(--bg2);transition:all .12s}
+.task:hover{border-color:var(--bd2);background:var(--bg3)}
+.task.done{opacity:.3}
+.task.done .tx{text-decoration:line-through;color:var(--mu)}
+.cb{width:15px;height:15px;min-width:15px;border-radius:3px;border:.5px solid var(--hi);margin-top:2px;display:flex;align-items:center;justify-content:center;transition:all .15s;cursor:pointer;flex-shrink:0}
+.task:hover .cb{border-color:var(--mu)}
+.task.done .cb{background:rgba(106,181,132,.15);border-color:var(--gr)}
+.ck{width:8px;height:5px;border-left:1.5px solid var(--gl);border-bottom:1.5px solid var(--gl);transform:rotate(-45deg) translateY(-1px);display:none}
+.task.done .ck{display:block}
+.tx{font-size:13px;color:var(--tx);line-height:1.6;flex:1;font-weight:300;word-break:break-word;min-width:0;border-radius:3px;cursor:text}
+.tx:hover{background:rgba(200,169,110,.04)}
+.tx[contenteditable=true]{outline:none;border-bottom:1px dashed var(--ac2);background:rgba(200,169,110,.05)!important;padding:0 2px}
+.ttag{font-size:10px;padding:2px 7px;border-radius:99px;white-space:nowrap;font-family:'Space Mono',monospace;flex-shrink:0}
+.tday{font-size:10px;color:var(--hi);font-family:'Space Mono',monospace;white-space:nowrap;flex-shrink:0;margin-top:3px;min-width:44px}
+.ta{display:flex;gap:2px;opacity:0;transition:opacity .15s;flex-shrink:0;margin-top:1px}
+.task:hover .ta{opacity:1}
+.ab{background:transparent;border:none;cursor:pointer;padding:3px 6px;border-radius:3px;font-size:10px;color:var(--hi);transition:all .1s;font-family:'Space Mono',monospace}
+.ab:hover{color:var(--tx);background:rgba(255,255,255,.06)}
+.ab.del:hover{color:#c47a7a}
+.ar{margin-top:8px}
+.abtn{width:100%;padding:8px 14px;border-radius:6px;border:.5px dashed var(--bd);background:transparent;color:var(--hi);font-size:12px;cursor:pointer;font-family:'Noto Sans Thai',sans-serif;transition:all .15s;text-align:left}
+.abtn:hover{border-color:var(--bd2);color:var(--mu);background:var(--bg2)}
+.af{display:flex;flex-direction:column;gap:8px;padding:12px 14px;border-radius:6px;border:.5px solid var(--ac2);background:var(--bg2);margin-top:8px}
+.af input,.af select,.af textarea{background:var(--bg3);border:.5px solid var(--bd2);border-radius:4px;color:var(--tx);font-size:13px;padding:6px 10px;font-family:'Noto Sans Thai',sans-serif;outline:none;width:100%}
+.af input:focus,.af select:focus,.af textarea:focus{border-color:var(--ac2)}
+.af textarea{resize:vertical;min-height:52px;line-height:1.5}
+.afr{display:flex;gap:6px;flex-wrap:wrap}
+.afr select{flex:0 0 90px}
+.afb{display:flex;gap:6px;justify-content:flex-end;margin-top:2px}
+.afb button{font-size:12px;padding:5px 14px;border-radius:4px;border:.5px solid var(--bd2);background:transparent;color:var(--mu);cursor:pointer;font-family:'Space Mono',monospace;transition:all .1s}
+.afb button.ok{border-color:var(--ac2);color:var(--ac)}
+.afb button:hover{background:var(--bg3);color:var(--tx)}
+.empty{padding:24px;text-align:center;font-size:13px;color:var(--hi);border:.5px dashed var(--bd);border-radius:6px;font-family:'Space Mono',monospace}
+/* DAY VIEW */
+.day-block{margin-bottom:16px;border:.5px solid var(--bd);border-radius:8px;overflow:hidden;background:var(--bg2)}
+.day-hdr{display:flex;align-items:center;gap:10px;padding:10px 14px;border-bottom:.5px solid var(--bd);background:var(--bg3)}
+.day-name{font-family:'Space Mono',monospace;font-size:12px;color:var(--ac);letter-spacing:.08em;min-width:80px}
+.day-date{font-family:'Space Mono',monospace;font-size:10px;color:var(--hi)}
+.day-tasks{display:flex;flex-direction:column;gap:0}
+.dtask{display:flex;align-items:stretch;gap:0;border-bottom:.5px solid var(--bd);transition:background .1s}
+.dtask:last-child{border-bottom:none}
+.dtask:hover{background:var(--bg3)}
+.dtask-time{font-family:'Space Mono',monospace;font-size:10px;color:var(--hi);padding:10px 12px;min-width:110px;border-right:.5px solid var(--bd);line-height:1.4;display:flex;align-items:flex-start;padding-top:12px}
+.dtask-body{flex:1;padding:10px 14px;display:flex;flex-direction:column;gap:3px}
+.dtask-label{font-size:13px;font-weight:400;line-height:1.4;cursor:text;border-radius:3px}
+.dtask-label:hover{background:rgba(200,169,110,.06)}
+.dtask-label[contenteditable=true]{outline:none;border-bottom:1px dashed var(--ac2);background:rgba(200,169,110,.07)!important;padding:0 2px}
+.dtask-detail{font-size:12px;color:var(--mu);line-height:1.6;cursor:text;border-radius:3px;white-space:pre-wrap}
+.dtask-detail:hover{background:rgba(200,169,110,.04)}
+.dtask-detail[contenteditable=true]{outline:none;border-bottom:1px dashed var(--ac2);background:rgba(200,169,110,.05)!important;padding:0 2px}
+.dtask-meta{display:flex;gap:6px;flex-wrap:wrap;margin-top:4px;align-items:center}
+.dtask-cb{width:32px;min-width:32px;display:flex;align-items:center;justify-content:center;cursor:pointer;border-right:.5px solid var(--bd);transition:background .1s}
+.dtask-cb:hover{background:rgba(106,181,132,.08)}
+.dtask-ck{width:14px;height:14px;border-radius:3px;border:.5px solid var(--hi);display:flex;align-items:center;justify-content:center;transition:all .15s}
+.dtask-cb:hover .dtask-ck{border-color:var(--mu)}
+.dtask-ck-on{background:rgba(106,181,132,.15);border-color:var(--gr)!important}
+.dtask-ck-on::after{content:'';display:block;width:8px;height:5px;border-left:1.5px solid var(--gl);border-bottom:1.5px solid var(--gl);transform:rotate(-45deg) translateY(-1px)}
+.dtask-strip{width:3px;min-width:3px;align-self:stretch;border-radius:0}
+.dtask.done-day{opacity:.35}
+.dtask.done-day .dtask-label{text-decoration:line-through}
+.day-empty{padding:14px;font-size:12px;color:var(--hi);font-family:'Space Mono',monospace;text-align:center}
+.dtask-note-pill{font-family:'Space Mono',monospace;font-size:10px;color:var(--mu);background:var(--bg);border:.5px solid var(--bd);padding:2px 8px;border-radius:3px;cursor:text;transition:background .1s}
+.dtask-note-pill:hover{background:var(--bg3);border-color:var(--bd2)}
+.dtask-note-pill[contenteditable=true]{outline:none;border-color:var(--ac2);background:var(--bg3)!important;color:var(--tx)}
+.dtask-note-empty{opacity:.35;font-style:italic}
+/* day personal note */
+.day-personal-note{background:rgba(200,169,110,.04);border:.5px solid rgba(200,169,110,.12);border-top:none;border-radius:0 0 6px 6px;padding:0}
+.day-note-inner{display:flex;align-items:flex-start;gap:8px;padding:8px 14px}
+.day-note-label{font-family:'Space Mono',monospace;font-size:9px;color:var(--ac2);letter-spacing:.1em;text-transform:uppercase;white-space:nowrap;padding-top:2px;min-width:36px}
+.day-note-text{font-size:12px;color:var(--mu);flex:1;line-height:1.6;border-radius:3px;min-height:18px;cursor:text;font-family:'Noto Sans Thai',sans-serif}
+.day-note-text:empty::before{content:attr(data-placeholder);opacity:.35;pointer-events:none}
+.day-note-text:hover{background:rgba(200,169,110,.05)}
+.day-note-text[contenteditable=true]{outline:none;color:var(--tx);background:rgba(200,169,110,.06)}
+/* tag/strip colors */
+.t-model{background:rgba(80,160,130,.2);color:#50c090}
+.t-game{background:rgba(74,96,128,.2);color:#8bb4d4}
+.t-art{background:rgba(200,100,70,.2);color:#e08060}
+.t-eng{background:rgba(60,140,120,.2);color:#70c4aa}
+.t-comm{background:rgba(130,80,160,.2);color:#c090e0}
+.t-travel{background:rgba(120,120,120,.2);color:#aaaaaa}
+.s-model{background:#0F6E56}
+.s-game{background:#534AB7}
+.s-art{background:#993C1D}
+.s-eng{background:#854F0B}
+.s-comm{background:#3B6D11}
+.s-travel{background:#888780}
+footer{margin-top:48px;padding-top:16px;border-top:.5px solid var(--bd);font-family:'Space Mono',monospace;font-size:11px;color:var(--hi);display:flex;justify-content:space-between;align-items:center}
+.resetbtn{font-family:'Space Mono',monospace;font-size:10px;padding:4px 10px;border-radius:4px;border:.5px solid var(--bd);background:transparent;color:var(--hi);cursor:pointer;transition:all .1s;margin-left:auto}
+.resetbtn:hover{border-color:#c47a7a;color:#c47a7a}
+[contenteditable=true]{outline:none}
+</style>
+</head>
+<body>
+<div class="noise"></div>
+<div class="app">
+<header>
+  <div class="htag">Personal Plan — 2 Months · 8 Weeks</div>
+  <h1>My <span>2-Month Plan</span></h1>
+  <p class="hsub">🧊 3D Model · 🎮 เกม UE5 · 🎨 วาดรูป/Commission · 👥 Community RP · 🗣️ English · 🚶 เที่ยว<br>คลิกข้อความเพื่อแก้ไข · ตารางรายวัน + Task pool</p>
+</header>
+<div class="sg">
+  <div class="sc"><div class="sn a" id="sd">0</div><div class="sl">เสร็จแล้ว</div></div>
+  <div class="sc"><div class="sn" id="st">0</div><div class="sl">ทั้งหมด</div></div>
+  <div class="sc"><div class="sn" id="sh">0</div><div class="sl">ชม. เหลือ</div></div>
+  <div class="sc"><div class="sn" id="sp">0%</div><div class="sl">ความคืบหน้า</div></div>
+</div>
+<div class="pw">
+  <div class="pm"><span>overall progress</span><span id="pp">0%</span></div>
+  <div class="pb"><div class="pf" id="pf" style="width:0%"></div></div>
+</div>
+<div class="wn" id="tabs"></div>
+<div id="whb"></div>
+<div id="wb"></div>
+<div class="view-toggle">
+  <span class="vl">view</span>
+  <button class="vb on" id="vb-week" onclick="setView('week')">Tasks รายสัปดาห์</button>
+  <button class="vb" id="vb-day" onclick="setView('day')">ตารางรายวัน</button>
+</div>
+<div class="fr" id="filterbar">
+  <span class="fl">filter</span>
+  <button class="fb on" onclick="sf('all',this)">ทั้งหมด</button>
+  <button class="fb" onclick="sf('model',this)">🧊 3D Model</button>
+  <button class="fb" onclick="sf('game',this)">🎮 เกม</button>
+  <button class="fb" onclick="sf('art',this)">🎨 วาดรูป</button>
+  <button class="fb" onclick="sf('eng',this)">🗣️ English</button>
+  <button class="fb" onclick="sf('comm',this)">👥 Community</button>
+  <button class="fb" onclick="sf('travel',this)">🚶 เที่ยว</button>
+</div>
+<div class="wp">
+  <span style="font-family:'Space Mono',monospace;font-size:11px;color:var(--mu);min-width:80px">สัปดาห์นี้</span>
+  <div class="wpb"><div class="wpf" id="wpf" style="width:0%"></div></div>
+  <span class="wpl" id="wpl">0%</span>
+</div>
+<p class="eh">// คลิกที่ข้อความเพื่อแก้ไข — Enter หรือคลิกออกเพื่อบันทึก</p>
+<div id="pool"></div>
+<div class="week-note-wrap">
+  <div class="week-note-box">
+    <div class="week-note-hdr"><span class="week-note-label">📝 โน้ตส่วนตัว — สัปดาห์นี้</span></div>
+    <div class="week-note-body"><textarea class="week-note-text" id="week-note-text" placeholder="จดรายละเอียดเพิ่มเติม... ไอเดีย / สิ่งที่ต้องจำ / ความรู้สึก" rows="4"></textarea></div>
+  </div>
+</div>
+<footer>
+  <span>my-plan / v2</span>
+  <span id="sync-status" style="font-family:'Space Mono',monospace;font-size:10px;margin-left:8px"></span>
+  <button class="resetbtn" onclick="if(confirm('รีเซ็ตข้อมูลทั้งหมด?')){Object.keys(localStorage).filter(k=>k.startsWith(FILE_ID)).forEach(k=>localStorage.removeItem(k));fbSet(FILE_ID,null).then(()=>location.reload())}">reset</button>
+  <span id="fd"></span>
+</footer>
+</div>
+<script>
+// ── DATA ────────────────────────────────────────────────────────────────────
+// fields: s(size S/M/L), tag, tx(title), day, time(บ่าย/ดึก/ทั้งวัน), detail(bullet steps), note(ชม.), hrs(float)
+const DEF = [
+
+// ── W1 ──────────────────────────────────────────────────────────────────────
+{ title:"สร้างฐาน — โมเดล + เกม + English", dates:"สัปดาห์ที่ 1",
+  warn:"โมเดลคือ priority 1 — ถ้าวันไหน energy น้อยให้ทำโมเดลก่อนเสมอ อย่างอื่นรอได้",
+  note:"เป้าหมาย: base mesh เริ่มต้น + dialogue system เบื้องต้น + คอร์ส EN วันที่ 1-6",
+  tasks:[
+  {s:"M",tag:"model",tx:"Reference board + เลือก style",day:"จันทร์",time:"บ่าย",hrs:2,
+   detail:"- เปิด Pinterest / ArtStation หาภาพ stylized character 20-30 ใบ\n- เลือก 5-10 ที่ชอบ style สุด save ไว้ใน folder\n- ตัดสินใจ proportion: หัวใหญ่แค่ไหน / body type / ความ stylized ระดับไหน",
+   note:"2 ชม."},
+  {s:"M",tag:"model",tx:"Base mesh เริ่ม — block out หยาบ",day:"จันทร์",time:"ดึก",hrs:3,
+   detail:"- เปิด Blender → เริ่มจาก cube หรือ mannequin\n- block out หัว ลำตัว แขน ขา หยาบๆ\n- ยังไม่ต้อง detail เน้น silhouette ให้ถูกก่อน",
+   note:"3 ชม."},
+  {s:"S",tag:"eng",tx:"คอร์ส Kru Dew วันที่ 1",day:"จันทร์",time:"ดึก",hrs:1,
+   detail:"- เปิดคอร์สทำตามที่ครูสอน\n- จดคำหรือ phrase ที่น่าสนใจ 2-3 อัน",
+   note:"1 ชม."},
+  {s:"M",tag:"model",tx:"Base mesh ต่อ — ปรับ silhouette",day:"อังคาร",time:"บ่าย",hrs:2.5,
+   detail:"- ดู reference ข้างๆ เปรียบเทียบ silhouette\n- ปรับ proportion ให้ตรงกับ style ที่เลือก\n- เช็ค: หัว / ไหล่ / เอว / ขา ให้ได้ feel stylized",
+   note:"2.5 ชม."},
+  {s:"M",tag:"model",tx:"Sculpt ใบหน้าเริ่ม",day:"อังคาร",time:"ดึก",hrs:4,
+   detail:"- switch to Sculpt mode\n- เพิ่ม subdivision ให้พอ sculpt\n- ใส่ feature ใบหน้า: ตา จมูก ปาก ขมับ\n- เน้น stylized: ตาใหญ่ จมูกเล็ก ปากชัด",
+   note:"4 ชม."},
+  {s:"S",tag:"eng",tx:"คอร์ส Kru Dew วันที่ 2",day:"อังคาร",time:"ดึก",hrs:1,
+   detail:"- ทำตามคอร์ส\n- ฝึกพูดตามทันที อย่าแค่ฟัง",
+   note:"1 ชม."},
+  {s:"M",tag:"model",tx:"Sculpt ใบหน้าต่อ — เพิ่ม detail",day:"พุธ",time:"บ่าย",hrs:2.5,
+   detail:"- ปรับ edge ตา ให้ดู expressive\n- เพิ่ม cheekbone เบาๆ\n- ทำ ear หยาบๆ\n- ดู reference ทุก 30 นาที",
+   note:"2.5 ชม."},
+  {s:"M",tag:"game",tx:"ตั้งค่า UE5 project + Dialogue Widget เบื้องต้น",day:"พุธ",time:"ดึก",hrs:3,
+   detail:"- เช็ค project settings: Thai font (Sarabun/Noto)\n- สร้าง folder structure: Blueprints / Assets / Maps / UI\n- สร้าง Widget ว่างสำหรับ dialogue: text box + choice buttons\n- ทดสอบว่าภาษาไทยแสดงถูกต้อง",
+   note:"3 ชม."},
+  {s:"S",tag:"eng",tx:"คอร์ส Kru Dew วันที่ 3",day:"พุธ",time:"ดึก",hrs:1,
+   detail:"- ทำตามคอร์ส\n- จด phrase ที่ใช้บ่อยในชีวิตประจำวัน",
+   note:"1 ชม."},
+  {s:"M",tag:"model",tx:"Sculpt body — ลำตัว แขน มือ",day:"พฤหัส",time:"บ่าย",hrs:2.5,
+   detail:"- sculpt ลำตัว: อก หน้าท้อง หลัง\n- sculpt แขน: ต้นแขน ข้อศอก ปลายแขน\n- มือ: block out นิ้ว 5 นิ้วหยาบๆ",
+   note:"2.5 ชม."},
+  {s:"M",tag:"model",tx:"Sculpt body ต่อ — ขา เท้า",day:"พฤหัส",time:"ดึก",hrs:4,
+   detail:"- sculpt ขา: ต้นขา เข่า น่อง\n- sculpt เท้า: block out หยาบๆ\n- เช็ค silhouette รวม full body\n- ปรับ proportion ถ้าบิดเบี้ยว",
+   note:"4 ชม."},
+  {s:"S",tag:"eng",tx:"คอร์ส Kru Dew วันที่ 4",day:"พฤหัส",time:"ดึก",hrs:1,
+   detail:"- ทำตามคอร์ส\n- ลอง speaking ตามทันทีหลังฟัง",
+   note:"1 ชม."},
+  {s:"M",tag:"model",tx:"Sculpt detail เพิ่ม — เก็บ feature",day:"ศุกร์",time:"บ่าย",hrs:2.5,
+   detail:"- เพิ่ม muscle definition เบาๆ\n- เก็บรายละเอียดที่ยังหยาบ\n- ดู reference เปรียบเทียบ full body\n- จด: ยังขาดอะไร / จะแก้ตอน retopo",
+   note:"2.5 ชม."},
+  {s:"M",tag:"art",tx:"Sketch ตัวอย่างงาน commission ชิ้นที่ 1",day:"ศุกร์",time:"ดึก",hrs:3,
+   detail:"- เลือก style ที่อยากโชว์: bust / half body\n- วาด character ที่แสดง style ได้ชัด\n- ยังไม่ต้อง finish แค่ sketch + rough color\n- เป้าหมาย: ให้คนเห็นแล้วรู้ว่าวาด style ไหน",
+   note:"3 ชม."},
+  {s:"S",tag:"eng",tx:"คอร์ส Kru Dew วันที่ 5",day:"ศุกร์",time:"ดึก",hrs:1,
+   detail:"- ทำตามคอร์ส\n- record เสียงตัวเองพูดตาม 1 นาที",
+   note:"1 ชม."},
+  {s:"M",tag:"comm",tx:"หา platform RP + lurk",day:"เสาร์",time:"บ่าย",hrs:2,
+   detail:"- หา Discord server roleplay วาดรูป\n- หา Twitter/Bluesky hashtag: #RPart #characterdesign\n- lurk ดูว่า community เป็นยังไง ยังไม่ต้อง post\n- save server/account ที่น่าสนใจ 3-5 แห่ง",
+   note:"2 ชม."},
+  {s:"S",tag:"eng",tx:"คอร์ส Kru Dew วันที่ 6",day:"เสาร์",time:"บ่าย",hrs:1,
+   detail:"- ทำตามคอร์ส\n- สรุปสิ่งที่เรียน W1 สั้นๆ",
+   note:"1 ชม."},
+]},
+
+// ── W2 ──────────────────────────────────────────────────────────────────────
+{ title:"Retopology + Dialogue System", dates:"สัปดาห์ที่ 2",
+  warn:"อย่าข้าม retopology ไปทำ texture — topology พังจะทำให้ rigging พังตอนหลัง",
+  note:"เป้าหมาย: retopology + UV เสร็จ + Dialogue choice ทำงานได้จริง + สร้างตัวละคร RP",
+  tasks:[
+  {s:"M",tag:"model",tx:"Retopology เริ่ม — หัว ใบหน้า",day:"จันทร์",time:"บ่าย",hrs:2.5,
+   detail:"- ใช้ Retopology tools หรือ BSurfaces\n- วาง edge loop รอบตา: ต้องวนรอบ orbital เป็นวงกลม\n- วาง edge loop รอบปาก: ต้องวนรอบ lip\n- edge ต้อง flow ตาม muscle direction",
+   note:"2.5 ชม."},
+  {s:"M",tag:"model",tx:"Retopology ต่อ — หัว ด้านข้าง หลัง",day:"จันทร์",time:"ดึก",hrs:4,
+   detail:"- ต่อ topology ด้านข้างใบหน้า\n- ส่วนหู: ทำให้ clean ไม่ต้องละเอียดมาก\n- ด้านหลังหัว: ต้องการ edge loop น้อยกว่า\n- เช็ค: pole ไม่ควรมีมากกว่า 5-6 edge",
+   note:"4 ชม."},
+  {s:"S",tag:"eng",tx:"คอร์ส Kru Dew วันที่ 7",day:"จันทร์",time:"ดึก",hrs:1,
+   detail:"- ทำตามคอร์ส\n- ฟัง podcast EN 30 นาทีระหว่างทำ retopo",
+   note:"1 ชม."},
+  {s:"M",tag:"model",tx:"Retopology ต่อ — ลำตัว",day:"อังคาร",time:"บ่าย",hrs:2.5,
+   detail:"- topology ลำตัว: edge loop รอบเอว อก\n- ใส่ edge loop extra ตรงที่จะ deform: รักแร้ เอว\n- เช็ค quad ทั้งหมด ไม่มี triangle บริเวณ deform",
+   note:"2.5 ชม."},
+  {s:"M",tag:"game",tx:"Dialogue choice + flag ทำให้ work",day:"อังคาร",time:"ดึก",hrs:4,
+   detail:"- สร้าง BP_DialogueManager\n- ใส่ choice button 2-3 อัน ใน Widget\n- สร้าง bool flag ใน GameInstance: talked_A, chose_X\n- ทดสอบ: เลือก choice A → flag set → คุย NPC อีกรอบ → พูดต่างออกไป",
+   note:"4 ชม."},
+  {s:"S",tag:"eng",tx:"คอร์ส Kru Dew วันที่ 8",day:"อังคาร",time:"ดึก",hrs:1,
+   detail:"- ทำตามคอร์ส\n- จด idiom / phrase ใหม่ 2-3 อัน",
+   note:"1 ชม."},
+  {s:"M",tag:"model",tx:"UV Unwrap เริ่ม",day:"พุธ",time:"บ่าย",hrs:2.5,
+   detail:"- Mark seam บริเวณ: ด้านในแขน / ใต้เท้า / หลังหู\n- Unwrap → เช็ค stretch ให้น้อยที่สุด\n- จัด UV island ให้ไม่ overlap\n- ส่วนใบหน้าให้ UV island ใหญ่ที่สุด",
+   note:"2.5 ชม."},
+  {s:"M",tag:"model",tx:"UV Unwrap ต่อ + เช็ค",day:"พุธ",time:"ดึก",hrs:4,
+   detail:"- UV ส่วน body / แขน / ขา\n- เช็ค texel density ให้ uniform\n- pack UV islands ให้ efficient\n- render UV map เช็คครั้งสุดท้าย",
+   note:"4 ชม."},
+  {s:"S",tag:"eng",tx:"คอร์ส Kru Dew วันที่ 9",day:"พุธ",time:"ดึก",hrs:1,
+   detail:"- ทำตามคอร์ส\n- ลอง speaking ออกเสียงตามทันที",
+   note:"1 ชม."},
+  {s:"M",tag:"game",tx:"ทดสอบ flag memory ข้ามฉาก",day:"พฤหัส",time:"บ่าย",hrs:2.5,
+   detail:"- สร้าง 2 map ทดสอบ\n- เดิน map A คุย NPC → set flag\n- เดิน map B → เช็คว่า flag ยังอยู่\n- ถ้า flag หาย: เช็ค GameInstance ว่า persist ถูกไหม",
+   note:"2.5 ชม."},
+  {s:"M",tag:"art",tx:"Sketch ตัวอย่างงาน commission ชิ้นที่ 2",day:"พฤหัส",time:"ดึก",hrs:4,
+   detail:"- วาด style ที่ต่างจากชิ้นแรกเล็กน้อย\n- ลอง pose ที่ dynamic กว่า\n- เพิ่ม expression ที่ชัดเจน\n- finish ให้มากกว่าชิ้นแรก: เพิ่ม flat color",
+   note:"4 ชม."},
+  {s:"S",tag:"eng",tx:"คอร์ส Kru Dew วันที่ 10",day:"พฤหัส",time:"ดึก",hrs:1,
+   detail:"- ทำตามคอร์ส\n- เขียนสรุปสิ่งที่เรียนวันนี้เป็น EN 3-5 ประโยค",
+   note:"1 ชม."},
+  {s:"M",tag:"game",tx:"Dialogue polish — NPC หัน + indicator",day:"ศุกร์",time:"บ่าย",hrs:2.5,
+   detail:"- NPC หัน face player ตอนเริ่ม dialogue\n- เพิ่ม indicator [E] ข้างบน NPC ตอน player เข้าใกล้\n- ปรับ distance trigger ให้ natural\n- ทดสอบ feel ของ interaction",
+   note:"2.5 ชม."},
+  {s:"M",tag:"comm",tx:"สร้างตัวละคร RP + เขียนประวัติ",day:"ศุกร์",time:"ดึก",hrs:4,
+   detail:"- คิดชื่อ / อายุ / background\n- เขียนประวัติ: มาจากไหน / แรงจูงใจ / จุดอ่อน\n- คิด personality: พูดยังไง / reaction ต่อสถานการณ์\n- เขียน bio สั้น 2-3 ประโยคสำหรับแนะนำตัวใน community",
+   note:"4 ชม."},
+  {s:"S",tag:"eng",tx:"คอร์ส Kru Dew วันที่ 11",day:"ศุกร์",time:"ดึก",hrs:1,
+   detail:"- ทำตามคอร์ส\n- speaking practice: พูดเล่าประวัติตัวละคร RP เป็น EN 1 นาที",
+   note:"1 ชม."},
+  {s:"S",tag:"travel",tx:"ออกบ้านสั้นๆ ครั้งที่ 1",day:"เสาร์",time:"บ่าย",hrs:0,
+   detail:"- ไปซื้อของ / คาเฟ่ / เดินเล่น\n- ไม่เปิดคอม ไม่เช็ค task\n- แค่ออกไปอยู่ข้างนอก เปลี่ยน environment",
+   note:"ไม่มี task"},
+]},
+
+// ── W3 ──────────────────────────────────────────────────────────────────────
+{ title:"Texture + Rig + Affection System", dates:"สัปดาห์ที่ 3",
+  warn:"Texture style ตัวที่ 1 จะเป็น reference ทุกตัวต่อไป ลงเวลาทำให้ถูก direction ก่อน",
+  note:"เป้าหมาย: texture stylized เสร็จ + rig เบื้องต้น + affection meter ทำงาน",
+  tasks:[
+  {s:"M",tag:"model",tx:"Texture flat color เริ่ม",day:"จันทร์",time:"บ่าย",hrs:2.5,
+   detail:"- เปิด texture painting หรือใช้ Substance Painter\n- ใส่ base color flat ทุกส่วน: ผิว / เสื้อผ้า / ผม\n- ยังไม่ต้อง shade ให้ได้ flat color ที่ถูก palette ก่อน\n- เลือก color palette 4-6 สีหลัก",
+   note:"2.5 ชม."},
+  {s:"M",tag:"model",tx:"Texture cel-shaded + outline",day:"จันทร์",time:"ดึก",hrs:4,
+   detail:"- เพิ่ม shadow pass: สีเข้มกว่า base 20-30%\n- ใส่ highlight เบาๆ บริเวณ: หัวไหล่ หัวเข่า จมูก\n- ลอง outline: post-process หรือ inverted hull\n- render ดู vibe เปรียบกับ reference",
+   note:"4 ชม."},
+  {s:"S",tag:"eng",tx:"คอร์ส Kru Dew วันที่ 12",day:"จันทร์",time:"ดึก",hrs:1,
+   detail:"- ทำตามคอร์ส\n- ฟัง podcast EN ระหว่างทำ texture",
+   note:"1 ชม."},
+  {s:"M",tag:"model",tx:"Texture เช็ค + adjust",day:"อังคาร",time:"บ่าย",hrs:2.5,
+   detail:"- render full body ดู overall\n- เปรียบกับ reference: style ตรงไหม\n- ปรับสีที่ดูไม่ถูก\n- เช็คใน light ต่างๆ: bright / dark / rim light",
+   note:"2.5 ชม."},
+  {s:"M",tag:"game",tx:"Affection Meter — variable + UI",day:"อังคาร",time:"ดึก",hrs:4,
+   detail:"- เพิ่ม float variable affection_NPC ใน GameInstance\n- สร้าง UI แสดงค่า (หรือซ่อนไว้ก็ได้ แต่ให้มีใน debug)\n- ทดสอบ: เลือก choice บางอัน → affection +1\n- ทดสอบ: เลือก choice บางอัน → affection -1",
+   note:"4 ชม."},
+  {s:"S",tag:"eng",tx:"คอร์ส Kru Dew วันที่ 13",day:"อังคาร",time:"ดึก",hrs:1,
+   detail:"- ทำตามคอร์ส\n- เขียน caption ภาษาอังกฤษให้งานที่วาดวันนี้",
+   note:"1 ชม."},
+  {s:"M",tag:"model",tx:"Rig — spine + head + arms",day:"พุธ",time:"บ่าย",hrs:2.5,
+   detail:"- เพิ่ม Armature\n- สร้าง bone: root / spine 2-3 / chest / neck / head\n- สร้าง bone แขน: shoulder / upper arm / forearm / hand\n- ตั้งชื่อ bone ให้ชัด: L_ R_ prefix",
+   note:"2.5 ชม."},
+  {s:"M",tag:"model",tx:"Rig — legs + test pose",day:"พุธ",time:"ดึก",hrs:4,
+   detail:"- สร้าง bone ขา: thigh / shin / foot / toe\n- Automatic Weight Paint → ทดสอบ\n- pose test: งอแขน งอขา หัน\n- แก้ weight paint ตรงที่ deform ผิด",
+   note:"4 ชม."},
+  {s:"S",tag:"eng",tx:"คอร์ส Kru Dew วันที่ 14",day:"พุธ",time:"ดึก",hrs:1,
+   detail:"- ทำตามคอร์ส\n- speaking: อธิบายขั้นตอน rigging เป็น EN 1 นาที",
+   note:"1 ชม."},
+  {s:"M",tag:"game",tx:"Affection unlock scene",day:"พฤหัส",time:"บ่าย",hrs:2.5,
+   detail:"- ถ้า affection >= 3 → unlock dialogue พิเศษ\n- ถ้า affection <= -2 → NPC พูดเย็นชา\n- implement ใน BP: check threshold → branch → เปิด dialogue ใหม่\n- ทดสอบ both paths",
+   note:"2.5 ชม."},
+  {s:"M",tag:"game",tx:"ทดสอบ choice +/- affection full flow",day:"พฤหัส",time:"ดึก",hrs:4,
+   detail:"- เล่นตั้งแต่ต้น: เลือก choice ดี → affection สูง → unlock scene\n- เล่นอีกรอบ: เลือก choice แย่ → affection ต่ำ → เห็นความต่าง\n- record screen ทั้งสอง path เก็บไว้\n- จด bug ถ้ามี",
+   note:"4 ชม."},
+  {s:"S",tag:"eng",tx:"คอร์ส Kru Dew วันที่ 15",day:"พฤหัส",time:"ดึก",hrs:1,
+   detail:"- ทำตามคอร์ส\n- จด phrase ที่ติดขัดบ่อย",
+   note:"1 ชม."},
+  {s:"M",tag:"art",tx:"ตัวอย่างงาน commission ชิ้นที่ 3 + ทำ rate card",day:"ศุกร์",time:"บ่าย",hrs:2.5,
+   detail:"- วาด finish ให้มากที่สุดใน 3 ชิ้น: full color + shading\n- ใช้เป็น showcase หลัก\n- ทำ rate card: tier (bust/half/full) + ราคา + วิธีติดต่อ\n- ดู reference ราคาคนอื่น style ใกล้เคียงก่อน",
+   note:"2.5 ชม."},
+  {s:"M",tag:"art",tx:"Finish งาน commission ชิ้นที่ 3",day:"ศุกร์",time:"ดึก",hrs:3,
+   detail:"- เก็บ line art ให้ clean\n- flat color + shadow + highlight\n- เพิ่ม background เบาๆ หรือ gradient\n- export: PNG ความละเอียดสูง + watermark version",
+   note:"3 ชม."},
+  {s:"S",tag:"eng",tx:"คอร์ส Kru Dew วันที่ 16",day:"ศุกร์",time:"ดึก",hrs:1,
+   detail:"- ทำตามคอร์ส\n- เขียน post EN สั้นๆ แนะนำตัวละครที่วาด",
+   note:"1 ชม."},
+  {s:"M",tag:"comm",tx:"วาดรูปตัวละคร RP ref sheet",day:"เสาร์",time:"บ่าย",hrs:2.5,
+   detail:"- วาด ref sheet ตัวละคร RP: front view + expression 2-3 แบบ\n- ใช้โชว์ใน community ตอนแนะนำตัว\n- ไม่ต้องสวยมาก แค่ให้เห็น character design\n- เพิ่ม bio สั้นๆ ข้างๆ รูป",
+   note:"2.5 ชม."},
+  {s:"S",tag:"eng",tx:"คอร์ส Kru Dew วันที่ 17",day:"เสาร์",time:"บ่าย",hrs:1,
+   detail:"- ทำตามคอร์ส\n- speaking practice: แนะนำตัวละคร RP เป็น EN",
+   note:"1 ชม."},
+]},
+
+// ── W4 ──────────────────────────────────────────────────────────────────────
+{ title:"Export UE5 + Clue System + เปิด Commission", dates:"สัปดาห์ที่ 4",
+  warn:"ห้ามเพิ่ม feature เกมใหม่จนกว่า clue system จะ work — ทำให้ครบก่อนค่อยต่อ",
+  note:"เป้าหมาย: โมเดลตัวที่ 1 อยู่ใน UE5 แล้ว + clue inventory ทำงาน + เปิดรับ commission แรก",
+  tasks:[
+  {s:"M",tag:"model",tx:"Export FBX → Import UE5",day:"จันทร์",time:"บ่าย",hrs:2.5,
+   detail:"- ใน Blender: Apply all transforms ก่อน export\n- Export settings: FBX / Armature / Animation\n- Import ใน UE5: เช็ค scale (UE5 ใช้ cm)\n- ถ้า scale ผิด: แก้ที่ import settings หรือกลับไปแก้ Blender",
+   note:"2.5 ชม."},
+  {s:"M",tag:"model",tx:"ใส่ idle animation + เช็ค scale",day:"จันทร์",time:"ดึก",hrs:4,
+   detail:"- import idle animation FBX\n- ใส่ใน AnimBlueprint: state machine → idle\n- วาง character ใน level → เช็ค scale กับ environment\n- เช็ค: bone deform ถูกไหมตอน idle\n- screenshot in-engine บันทึกไว้",
+   note:"4 ชม."},
+  {s:"S",tag:"eng",tx:"คอร์ส Kru Dew วันที่ 18",day:"จันทร์",time:"ดึก",hrs:1,
+   detail:"- ทำตามคอร์ส\n- ฟัง podcast EN ระหว่าง import/setup",
+   note:"1 ชม."},
+  {s:"M",tag:"model",tx:"Render portfolio — 3 มุม + wireframe ✓",day:"อังคาร",time:"บ่าย",hrs:2.5,
+   detail:"- ตั้ง lighting: key light / fill light / rim light\n- render: front / 3/4 / side view\n- render wireframe version (material override)\n- render texture preview close-up ใบหน้า\n- save ไว้ใน portfolio folder",
+   note:"2.5 ชม. ✓ จบโมเดลตัวที่ 1"},
+  {s:"M",tag:"game",tx:"Clue/Inventory widget + เก็บ item ได้",day:"อังคาร",time:"ดึก",hrs:4,
+   detail:"- สร้าง Widget: inventory list หรือ grid\n- วาง clue object ใน level (จดหมาย / รูปถ่าย / ของแปลก)\n- กด E ใกล้ object → เพิ่มใน inventory\n- แสดงใน inventory widget: ชื่อ + icon\n- ทดสอบเก็บ 3-4 ชิ้น",
+   note:"4 ชม."},
+  {s:"S",tag:"eng",tx:"คอร์ส Kru Dew วันที่ 19",day:"อังคาร",time:"ดึก",hrs:1,
+   detail:"- ทำตามคอร์ส\n- เขียน caption EN สำหรับ render portfolio ที่ทำ",
+   note:"1 ชม."},
+  {s:"M",tag:"game",tx:"Clue combine + unlock entry",day:"พุธ",time:"บ่าย",hrs:2.5,
+   detail:"- implement logic: ถ้ามี clue A + clue B → unlock journal entry ใหม่\n- สร้าง journal/caseboard widget แสดง entry ที่ unlock\n- ทดสอบ: เก็บครบ → entry ใหม่ขึ้น\n- ทดสอบ: ยังไม่ครบ → entry ไม่ขึ้น",
+   note:"2.5 ชม."},
+  {s:"M",tag:"game",tx:"Environmental storytelling — วาง object",day:"พุธ",time:"ดึก",hrs:4,
+   detail:"- วาง object ที่เล่าเรื่องโดยไม่มี text: รอยไหม้ / จดหมาย / ของที่วางผิดที่\n- บาง object กด E อ่านได้ → popup text สั้นๆ\n- บาง object แค่ดูได้ ไม่มี interaction\n- เป้าหมาย: เดินสำรวจ 2 นาทีแล้วรู้สึก 'มีเรื่องราวในที่นี้'",
+   note:"4 ชม."},
+  {s:"S",tag:"eng",tx:"คอร์ส Kru Dew วันที่ 20",day:"พุธ",time:"ดึก",hrs:1,
+   detail:"- ทำตามคอร์ส\n- speaking: อธิบาย environmental storytelling เป็น EN",
+   note:"1 ชม."},
+  {s:"M",tag:"game",tx:"Environmental polish + test",day:"พฤหัส",time:"บ่าย",hrs:2.5,
+   detail:"- เดินสำรวจทั้ง scene ดู flow\n- ปรับ lighting ให้ object สำคัญดูเด่น\n- เพิ่ม ambient sound เบาๆ\n- screenshot scene บันทึกไว้เป็น portfolio",
+   note:"2.5 ชม."},
+  {s:"M",tag:"art",tx:"โพสต์เปิดรับ commission ใน RP community",day:"พฤหัส",time:"ดึก",hrs:3,
+   detail:"- โพสต์ rate card + ตัวอย่างงาน 3 ชิ้น\n- เขียน caption: style / ราคา / วิธีติดต่อ\n- โพสต์ใน community ที่ lurk อยู่\n- ถ้ามีคนสนใจ ตอบ DM ทันที",
+   note:"3 ชม."},
+  {s:"S",tag:"eng",tx:"คอร์ส Kru Dew วันที่ 21 ✓ ครบคอร์ส!",day:"พฤหัส",time:"ดึก",hrs:1,
+   detail:"- ทำตามคอร์ส วันสุดท้าย!\n- สรุปสิ่งที่เรียนมาทั้ง 21 วัน\n- จด: กล้าพูดขึ้นไหม / ยังติดขัดเรื่องอะไร",
+   note:"1 ชม. ✓ ครบ Kru Dew!"},
+  {s:"M",tag:"eng",tx:"Speaking record ครั้งแรก — เก็บเปรียบ",day:"ศุกร์",time:"บ่าย",hrs:1.5,
+   detail:"- record เสียงตัวเอง 2-3 นาที\n- พูดถึง: ตัวเอง / งานที่ทำ / สิ่งที่อยากทำ\n- ฟังกลับ: จดจุดที่ติดขัด / ออกเสียงผิด\n- เก็บไฟล์ไว้เปรียบกับ W7",
+   note:"1.5 ชม."},
+  {s:"M",tag:"art",tx:"รับ brief commission + sketch ถ้ามี client",day:"ศุกร์",time:"ดึก",hrs:4,
+   detail:"- ถ้ามี client: รับ brief / ref / mood\n- ส่ง sketch ให้ approve ก่อนลงสี\n- ถ้ายังไม่มี: วาด portfolio piece เพิ่มอีก 1 ชิ้น\n- เน้น: ทำงานให้ professional ตั้งแต่ต้น",
+   note:"4 ชม."},
+  {s:"S",tag:"eng",tx:"Speaking + เขียน caption EN ทุกวัน",day:"ศุกร์",time:"ดึก",hrs:1,
+   detail:"- speaking practice 30 นาที: พูดเล่าสิ่งที่ทำวันนี้\n- เขียน caption EN สำหรับงาน 1 ชิ้น\n- ฟัง podcast 30 นาทีระหว่างทำงานอื่น",
+   note:"1 ชม."},
+  {s:"S",tag:"travel",tx:"ออกบ้านสั้นๆ ครั้งที่ 2",day:"เสาร์",time:"บ่าย",hrs:0,
+   detail:"- ไปซื้อของ / คาเฟ่ / เดินเล่น\n- ไม่เปิดคอม ไม่เช็ค task\n- ชาร์จแบตให้ตัวเอง",
+   note:"ไม่มี task"},
+]},
+
+// ── W5 ──────────────────────────────────────────────────────────────────────
+{ title:"โมเดลตัวที่ 2 + Sequencer", dates:"สัปดาห์ที่ 5",
+  warn:"Sequencer มี learning curve สูง — เผื่อเวลาเพิ่ม ถ้าติดให้ดู tutorial ก่อนทำ",
+  note:"เป้าหมาย: base mesh + texture ตัวที่ 2 เสร็จ + cutscene ทำงานได้อย่างน้อย 1 scene",
+  tasks:[
+  {s:"M",tag:"model",tx:"Base mesh ตัวที่ 2 — copy + ปรับ",day:"จันทร์",time:"บ่าย",hrs:2.5,
+   detail:"- duplicate base mesh ตัวที่ 1\n- ปรับ proportion ให้ดูต่างออก: สูงกว่า / เตี้ยกว่า / body type ต่าง\n- เปลี่ยน silhouette ให้ชัด: ทรงผม / ชุด / feature ใบหน้า\n- เป้าหมาย: เห็นทั้งสองตัวแล้วรู้ทันทีว่าต่างกัน",
+   note:"2.5 ชม."},
+  {s:"M",tag:"model",tx:"Base mesh ตัวที่ 2 ต่อ — shape detail",day:"จันทร์",time:"ดึก",hrs:4,
+   detail:"- ปรับ facial feature: ดูต่างจากตัวแรก\n- ปรับ clothing silhouette\n- ยังไม่ต้อง sculpt detail ลึก เพราะไม่ต้อง rig\n- เช็ค: silhouette น่าสนใจพอไหม",
+   note:"4 ชม."},
+  {s:"S",tag:"eng",tx:"EN: Speaking + ฟัง podcast",day:"จันทร์",time:"ดึก",hrs:1,
+   detail:"- speaking 30 นาที: describe ตัวละครตัวที่ 2 เป็น EN\n- ฟัง podcast 30 นาทีระหว่าง sculpt",
+   note:"1 ชม."},
+  {s:"M",tag:"model",tx:"Shape + เก็บ detail ตัวที่ 2",day:"อังคาร",time:"บ่าย",hrs:2.5,
+   detail:"- เก็บ detail ที่ยังหยาบ\n- ตรวจ silhouette ทุกมุม\n- เตรียม UV: mark seam คร่าวๆ ก่อน texture",
+   note:"2.5 ชม."},
+  {s:"M",tag:"game",tx:"Sequencer — camera track เริ่ม",day:"อังคาร",time:"ดึก",hrs:4,
+   detail:"- เปิด Level Sequencer ใหม่\n- เพิ่ม Camera Cut track\n- สร้าง CineCamera Actor\n- animate camera: เริ่มที่จุด A เคลื่อนไปจุด B ใน 3 วินาที\n- preview ดู feel",
+   note:"4 ชม."},
+  {s:"S",tag:"eng",tx:"EN: Speaking + เขียน caption",day:"อังคาร",time:"ดึก",hrs:1,
+   detail:"- speaking: pitch เกมที่ทำให้คนอื่นฟัง 2 นาที EN\n- เขียน caption EN สั้นๆ สำหรับ WIP model",
+   note:"1 ชม."},
+  {s:"M",tag:"game",tx:"Sequencer — animation ตัวละคร",day:"พุธ",time:"บ่าย",hrs:2.5,
+   detail:"- เพิ่ม Skeletal Mesh track ใน Sequencer\n- keyframe animation: ตัวละคร walk / turn / gesture\n- sync กับ camera movement\n- เพิ่ม audio track: BGM หรือ ambient",
+   note:"2.5 ชม."},
+  {s:"M",tag:"game",tx:"Trigger cutscene จาก dialogue",day:"พุธ",time:"ดึก",hrs:4,
+   detail:"- สร้าง trigger: หลัง dialogue จบ choice หนึ่ง → play sequencer\n- ทดสอบ full flow: dialogue → choice → cutscene เริ่ม\n- เช็ค: camera blend smooth ไหม\n- เช็ค: animation timing ตรงไหม\n- record screen เก็บไว้",
+   note:"4 ชม."},
+  {s:"S",tag:"eng",tx:"EN: Speaking + ฟัง podcast",day:"พุธ",time:"ดึก",hrs:1,
+   detail:"- speaking 30 นาที: อธิบาย cutscene ที่ทำเป็น EN\n- ฟัง podcast 30 นาที",
+   note:"1 ชม."},
+  {s:"M",tag:"model",tx:"Texture ตัวที่ 2 เริ่ม — flat color",day:"พฤหัส",time:"บ่าย",hrs:2.5,
+   detail:"- ใช้ style เดียวกับตัวที่ 1 ให้ consistent\n- เลือก color palette ที่ต่างจากตัวแรก\n- flat color ทุกส่วน: ผิว / เสื้อผ้า / ผม",
+   note:"2.5 ชม."},
+  {s:"M",tag:"model",tx:"Texture ตัวที่ 2 ต่อ — cel-shaded",day:"พฤหัส",time:"ดึก",hrs:4,
+   detail:"- เพิ่ม shadow pass ตาม style ตัวที่ 1\n- เพิ่ม highlight เบาๆ\n- เช็ค: วางข้างกันกับตัวที่ 1 แล้วดู consistent ไหม\n- render preview",
+   note:"4 ชม."},
+  {s:"S",tag:"eng",tx:"EN: เขียน devlog + speaking",day:"พฤหัส",time:"ดึก",hrs:1,
+   detail:"- เขียน devlog EN สั้นๆ: สิ่งที่ทำ W5 3-5 ประโยค\n- speaking: อ่าน devlog ออกเสียง + improvise ต่อ",
+   note:"1 ชม."},
+  {s:"M",tag:"art",tx:"Commission ทำงานถ้ามี client",day:"ศุกร์",time:"บ่าย",hrs:2.5,
+   detail:"- ถ้ามี client: sketch → approve → ลงสี\n- ส่งงานตามเวลาที่นัด\n- ถ้ายังไม่มี: โพสต์ rate card อีกรอบในที่ใหม่\n- จด: ได้ feedback อะไรจาก community บ้าง",
+   note:"2.5 ชม."},
+  {s:"M",tag:"art",tx:"Commission ต่อ / portfolio piece",day:"ศุกร์",time:"ดึก",hrs:4,
+   detail:"- ถ้ามี commission: finish + ส่ง + ขอ review\n- ถ้ายังไม่มี: วาด portfolio piece ที่แสดง range ใหม่\n- ลอง: ท่าใหม่ / emotion ใหม่ / background เบาๆ",
+   note:"4 ชม."},
+  {s:"S",tag:"eng",tx:"EN: Speaking + ฟัง",day:"ศุกร์",time:"ดึก",hrs:1,
+   detail:"- speaking practice 30 นาที\n- ฟัง podcast EN 30 นาที",
+   note:"1 ชม."},
+  {s:"M",tag:"comm",tx:"เริ่มเข้า RP story แรก",day:"เสาร์",time:"บ่าย",hrs:2,
+   detail:"- เลือก community ที่ lurk ไว้ → เข้าร่วม story\n- แนะนำตัวละคร + bio ที่เขียนไว้\n- interact กับ character คนอื่นอย่าง genuine\n- ยังไม่ต้องรีบ ค่อยๆ เข้า",
+   note:"2 ชม."},
+  {s:"S",tag:"eng",tx:"EN: Speaking + ฟัง",day:"เสาร์",time:"บ่าย",hrs:1,
+   detail:"- speaking practice: เล่า RP story ที่เพิ่งเล่นเป็น EN\n- ฟัง podcast ระหว่างพัก",
+   note:"1 ชม."},
+]},
+
+// ── W6 ──────────────────────────────────────────────────────────────────────
+{ title:"Render โมเดล + Art Pass Scene", dates:"สัปดาห์ที่ 6",
+  warn:"Art pass ทำทีละโซน จนจบโซนนั้นก่อน อย่าทำทุกโซนพร้อมกันจะไม่จบสักโซน",
+  note:"เป้าหมาย: โมเดลทั้ง 2 ตัว upload ArtStation ✓ + scene ดูดีโชว์ได้ + commission ต่อเนื่อง",
+  tasks:[
+  {s:"M",tag:"model",tx:"Render ตัวที่ 2 + Upload ArtStation ✓",day:"จันทร์",time:"บ่าย",hrs:2.5,
+   detail:"- render: front / 3/4 / side + wireframe\n- เขียน description EN: style / software / poly count\n- upload ArtStation: ทั้ง 2 ตัวพร้อมกัน\n- ตั้ง tag: 3D / stylized / character / fanart ฯลฯ\n- เช็ค: thumbnail ดูดีไหม",
+   note:"2.5 ชม. ✓ โมเดลทั้ง 2 ตัวจบ!"},
+  {s:"M",tag:"game",tx:"Art pass scene — lighting + atmosphere",day:"จันทร์",time:"ดึก",hrs:4,
+   detail:"- แทน graybox ด้วย asset จริงในโซนหลัก\n- ตั้ง Directional Light: warm tone / angle\n- เพิ่ม Sky Light + Point Light ในอาคาร\n- Post Process: vignette เบาๆ / color grade\n- เป้าหมาย: screenshot แล้วดูดีพอ portfolio",
+   note:"4 ชม."},
+  {s:"S",tag:"eng",tx:"EN: Speaking record ครั้งที่ 2",day:"จันทร์",time:"ดึก",hrs:1,
+   detail:"- record 2-3 นาที: พูดถึงงานที่ทำมา 6 สัปดาห์\n- ฟังกลับ: เปรียบกับครั้งแรก W4 — คล่องขึ้นไหม\n- จด: จุดที่ยังติดขัด",
+   note:"1 ชม."},
+  {s:"M",tag:"game",tx:"Art pass ต่อ — polish detail",day:"อังคาร",time:"บ่าย",hrs:2.5,
+   detail:"- เพิ่ม prop detail: ของบนโต๊ะ / poster บนผนัง\n- ปรับ shadow ให้ดู dramatic พอดี\n- เช็ค performance: frame rate ยังโอเคไหม\n- เดินทดสอบทุกมุมกล้อง",
+   note:"2.5 ชม."},
+  {s:"M",tag:"game",tx:"Screenshot ทุกระบบ — เก็บ portfolio",day:"อังคาร",time:"ดึก",hrs:4,
+   detail:"- screenshot แต่ละระบบ: dialogue / affection / clue / env storytelling / cutscene\n- record clip สั้นๆ แต่ละระบบ 15-30 วินาที\n- จัด folder: portfolio/game/screenshots + clips\n- เขียน caption สั้นๆ แต่ละระบบว่าคืออะไร",
+   note:"4 ชม."},
+  {s:"S",tag:"eng",tx:"EN: Speaking + เขียน caption",day:"อังคาร",time:"ดึก",hrs:1,
+   detail:"- เขียน caption EN สำหรับ screenshot แต่ละระบบ\n- speaking: อธิบาย 1 ระบบที่ภูมิใจสุดเป็น EN",
+   note:"1 ชม."},
+  {s:"M",tag:"art",tx:"Commission ทำงาน",day:"พุธ",time:"บ่าย",hrs:2.5,
+   detail:"- ถ้ามี commission: ทำ sketch → line art\n- ส่ง WIP ให้ client เช็ค\n- ถ้ายังไม่มี: โพสต์งาน WIP ใน community ใหม่",
+   note:"2.5 ชม."},
+  {s:"M",tag:"art",tx:"Commission ส่งงาน",day:"พุธ",time:"ดึก",hrs:4,
+   detail:"- finish: color + shading + export\n- ส่งให้ client: full res + watermark version\n- ขอ review / testimonial\n- โพสต์งาน finished (ถ้า client อนุญาต)",
+   note:"4 ชม."},
+  {s:"S",tag:"eng",tx:"EN: เขียน devlog",day:"พุธ",time:"ดึก",hrs:1,
+   detail:"- เขียน devlog EN: W5-6 ทำอะไรบ้าง\n- post บน social หรือเก็บไว้ใน doc ก็ได้\n- เขียนเอง ไม่ให้ AI เขียนแทน",
+   note:"1 ชม."},
+  {s:"M",tag:"game",tx:"Record demo clip รวมทุกระบบ",day:"พฤหัส",time:"บ่าย",hrs:2.5,
+   detail:"- record gameplay walkthrough: เดินสำรวจ → เก็บ clue → คุย NPC → affection เปลี่ยน → cutscene\n- ตัดให้เหลือ 2-3 นาทีที่ดีที่สุด\n- ใช้เป็น portfolio video\n- ไม่ต้องโชว์ทุกอย่าง เลือก moment ที่ดูดีสุด",
+   note:"2.5 ชม."},
+  {s:"M",tag:"comm",tx:"เล่น RP ต่อ + วาดรูปตัวละครเพื่อน",day:"พฤหัส",time:"ดึก",hrs:4,
+   detail:"- เล่น RP story ต่อ interact กับ character อื่น\n- วาดรูปตัวละครของเพื่อนใน community เป็น gift\n- โพสต์: tag เพื่อน + caption น่ารักๆ\n- วิธีที่เร็วสุดในการสร้าง connection จริงๆ",
+   note:"4 ชม."},
+  {s:"S",tag:"eng",tx:"EN: Speaking + ฟัง",day:"พฤหัส",time:"ดึก",hrs:1,
+   detail:"- speaking 30 นาที: เล่าเรื่องที่เกิดใน RP เป็น EN\n- ฟัง podcast 30 นาที",
+   note:"1 ชม."},
+  {s:"M",tag:"art",tx:"Commission รับงานใหม่ถ้ามี",day:"ศุกร์",time:"บ่าย",hrs:2.5,
+   detail:"- เช็ค DM / message ว่ามีคนสนใจไหม\n- ถ้ามี: รับ brief + กำหนด deadline ชัดเจน\n- ถ้ายังไม่มี: promote rate card อีกรอบใน community RP\n- จด: ราคาที่ตั้งไว้ reasonable ไหม",
+   note:"2.5 ชม."},
+  {s:"M",tag:"game",tx:"เช็ค bug ทุกระบบ",day:"ศุกร์",time:"ดึก",hrs:4,
+   detail:"- เล่น full flow: clue → dialogue → affection → cutscene → env storytelling\n- จด bug ทุกอัน: crash / logic ผิด / visual เพี้ยน\n- เรียง priority: game breaking > logic > visual\n- แก้ game breaking ก่อน",
+   note:"4 ชม."},
+  {s:"S",tag:"eng",tx:"EN: Speaking + ฟัง",day:"ศุกร์",time:"ดึก",hrs:1,
+   detail:"- speaking practice 30 นาที\n- ฟัง podcast 30 นาที",
+   note:"1 ชม."},
+  {s:"S",tag:"travel",tx:"ออกบ้านสั้นๆ ครั้งที่ 3",day:"เสาร์",time:"บ่าย",hrs:0,
+   detail:"- ไปซื้อของ / คาเฟ่ / เดินเล่น\n- ไม่เปิดคอม ไม่เช็ค task\n- พักสมองก่อน W7",
+   note:"ไม่มี task"},
+]},
+
+// ── W7 ──────────────────────────────────────────────────────────────────────
+{ title:"Playtest + Fix + Commission + RP", dates:"สัปดาห์ที่ 7",
+  warn:"สัปดาห์นี้เน้น fix และ wrap up — ห้ามเพิ่ม feature ใหม่เด็ดขาด",
+  note:"เป้าหมาย: เกมทุกระบบสมบูรณ์โชว์ได้ + commission ส่งครบ + RP story 2 เริ่ม + EN เปรียบ progress",
+  tasks:[
+  {s:"M",tag:"game",tx:"Playtest ทุกระบบ — จด bug",day:"จันทร์",time:"บ่าย",hrs:2.5,
+   detail:"- เล่นตั้งแต่ต้น ทุกระบบ\n- ไม่แก้ระหว่างเล่น จด list ไว้ก่อน\n- จด: อะไรที่ดูดี / อะไรที่ยังพัง / อะไรที่ confusing\n- record screen เก็บไว้",
+   note:"2.5 ชม."},
+  {s:"M",tag:"game",tx:"Fix bug priority list",day:"จันทร์",time:"ดึก",hrs:4,
+   detail:"- แก้ตาม priority: game breaking → logic → visual\n- แก้ทีละอัน test ทันทีหลังแก้\n- อย่าแก้หลายอันพร้อมกัน จะ debug ไม่ออก\n- record หลัง fix เปรียบกับก่อน fix",
+   note:"4 ชม."},
+  {s:"S",tag:"eng",tx:"EN: Speaking + ฟัง",day:"จันทร์",time:"ดึก",hrs:1,
+   detail:"- speaking 30 นาที: pitch เกมให้คนอื่นฟัง EN\n- ฟัง podcast 30 นาที",
+   note:"1 ชม."},
+  {s:"M",tag:"art",tx:"Commission ทำงาน",day:"อังคาร",time:"บ่าย",hrs:2.5,
+   detail:"- ทำ commission ที่รับไว้\n- sketch → approve → line art\n- ส่ง WIP update ให้ client",
+   note:"2.5 ชม."},
+  {s:"M",tag:"art",tx:"Commission ส่งงาน",day:"อังคาร",time:"ดึก",hrs:4,
+   detail:"- finish: color + shading + polish\n- export full res + watermark\n- ส่ง client + ขอ review\n- โพสต์ finished piece",
+   note:"4 ชม."},
+  {s:"S",tag:"eng",tx:"EN: เขียน caption + speaking",day:"อังคาร",time:"ดึก",hrs:1,
+   detail:"- เขียน caption EN สำหรับ commission finished\n- speaking 30 นาที",
+   note:"1 ชม."},
+  {s:"M",tag:"comm",tx:"RP story ที่ 2 เริ่ม",day:"พุธ",time:"บ่าย",hrs:2.5,
+   detail:"- หา story ใหม่หรือต่อ story เดิม\n- introduce ตัวละครในบริบทใหม่\n- interact กับ character ใหม่ที่ยังไม่เคยเจอ\n- เป้าหมาย: เพิ่ม connection ใหม่ใน community",
+   note:"2.5 ชม."},
+  {s:"M",tag:"comm",tx:"วาดรูปตัวละคร RP scene",day:"พุธ",time:"ดึก",hrs:4,
+   detail:"- วาดรูป scene จาก RP ที่เล่น\n- ใส่ตัวละครของตัวเองและ/หรือเพื่อน\n- โพสต์ใน community พร้อม tag\n- วิธีนี้ทำให้คนจำได้และ appreciate มาก",
+   note:"4 ชม."},
+  {s:"S",tag:"eng",tx:"EN: Speaking + ฟัง",day:"พุธ",time:"ดึก",hrs:1,
+   detail:"- speaking 30 นาที: เล่า RP story เป็น EN\n- ฟัง podcast 30 นาที",
+   note:"1 ชม."},
+  {s:"M",tag:"game",tx:"Screenshot final + record portfolio clip",day:"พฤหัส",time:"บ่าย",hrs:2.5,
+   detail:"- screenshot final ทุกระบบหลัง fix\n- record walkthrough สั้นๆ 2-3 นาที: โชว์ทุกระบบ\n- จัด folder portfolio ให้เป็นระเบียบ\n- เขียน README สั้นๆ: ระบบที่ทำ + เครื่องมือที่ใช้",
+   note:"2.5 ชม."},
+  {s:"M",tag:"art",tx:"Commission ส่งงานค้างให้หมด",day:"พฤหัส",time:"ดึก",hrs:4,
+   detail:"- เช็ค: มี commission ค้างไหม\n- ถ้ามี: finish + ส่ง\n- ถ้าไม่มี: โพสต์ commission info อีกรอบ\n- สรุป: รับงานมากี่ชิ้น / รายได้เท่าไหร่",
+   note:"4 ชม."},
+  {s:"S",tag:"eng",tx:"EN: Speaking record เปรียบ W4",day:"พฤหัส",time:"ดึก",hrs:1,
+   detail:"- record 2-3 นาที เหมือนครั้ง W4\n- เปิดฟัง recording W4 เปรียบเทียบ\n- จด: กล้าขึ้นไหม / คล่องขึ้นไหม / vocab เพิ่มไหม",
+   note:"1 ชม."},
+  {s:"M",tag:"model",tx:"ArtStation — description + tag ครบ",day:"ศุกร์",time:"บ่าย",hrs:1,
+   detail:"- เช็ค ArtStation ทั้ง 2 ตัว\n- เพิ่ม description ให้ครบ: concept / process / tool\n- เพิ่ม tag ที่ยังขาด\n- เช็ค thumbnail ดูดีไหม\n- share link ใน community",
+   note:"1 ชม."},
+  {s:"M",tag:"game",tx:"เคลียร์งานค้างทุกอย่าง",day:"ศุกร์",time:"ดึก",hrs:4,
+   detail:"- fix bug ที่เหลือ (ไม่ใช่ game breaking ก็ได้ทำถ้าเวลาพอ)\n- เช็ค portfolio folder ว่าครบไหม\n- backup ไฟล์ทั้งหมด\n- เขียน: สิ่งที่ทำได้ใน 7 สัปดาห์",
+   note:"4 ชม."},
+  {s:"S",tag:"eng",tx:"EN: เขียน reflection",day:"ศุกร์",time:"ดึก",hrs:1,
+   detail:"- เขียน reflection EN: 7 สัปดาห์ได้อะไรบ้าง\n- ภาษาอังกฤษดีขึ้นไหม เปรียบกับวันแรก\n- post หรือเก็บไว้ใน doc",
+   note:"1 ชม."},
+  {s:"S",tag:"travel",tx:"ออกบ้านสั้นๆ ครั้งที่ 4",day:"เสาร์",time:"บ่าย",hrs:0,
+   detail:"- ไปซื้อของ / คาเฟ่ / เดินเล่น\n- ไม่เปิดคอม ไม่เช็ค task\n- เตรียมตัวสำหรับสัปดาห์สุดท้าย",
+   note:"ไม่มี task"},
+]},
+
+// ── W8 ──────────────────────────────────────────────────────────────────────
+{ title:"สรุป + เที่ยวยาว 🎉", dates:"สัปดาห์ที่ 8",
+  warn:"ห้ามเพิ่ม feature ใหม่หรือเริ่มโปรเจคใหม่ — wrap up ให้หมด แล้วไปเที่ยวได้เลย",
+  note:"เป้าหมาย: portfolio folder ครบ + commission เสร็จ + review 2 เดือน + เที่ยวยาว 4-5 วัน 🎉",
+  tasks:[
+  {s:"M",tag:"game",tx:"Portfolio folder รวม + README",day:"จันทร์",time:"บ่าย",hrs:2,
+   detail:"- รวม: screenshot ทุกระบบ + clip + render โมเดล\n- เขียน README: ชื่อ / ระบบที่ทำ / เครื่องมือ / เวลาที่ใช้\n- จัด folder structure ให้คนอื่นดูแล้วเข้าใจได้\n- อัปโหลด Google Drive หรือ GitHub",
+   note:"2 ชม."},
+  {s:"M",tag:"art",tx:"Commission สรุปรายได้ + ตั้ง goal ต่อ",day:"จันทร์",time:"ดึก",hrs:2,
+   detail:"- จด: รับงานกี่ชิ้น / รายได้รวม / client พอใจไหม\n- feedback ที่ได้: อะไรที่คนชอบ / อยากปรับอะไร\n- ตั้ง goal เดือนหน้า: รับงานกี่ชิ้น / ราคาเพิ่มได้ไหม",
+   note:"2 ชม."},
+  {s:"S",tag:"eng",tx:"EN: เปรียบ recording ต้น-ท้าย",day:"จันทร์",time:"ดึก",hrs:1,
+   detail:"- เปิดฟัง recording W1 วันแรก\n- record ใหม่ topic เดิม\n- เปรียบ: กล้าขึ้นไหม / คล่องขึ้นไหม / ผิดน้อยลงไหม\n- celebrate progress ไม่ว่าจะเป็นแค่ไหน",
+   note:"1 ชม."},
+  {s:"M",tag:"comm",tx:"โพสต์รูป RP สรุป 2 เดือน",day:"อังคาร",time:"บ่าย",hrs:2,
+   detail:"- วาดรูปสรุป: ตัวละคร RP ในช่วง 2 เดือน\n- เขียน caption: journey ที่ผ่านมา / ขอบคุณเพื่อนใน community\n- โพสต์ใน community ที่เล่นอยู่\n- เป็น closing post ที่ดีก่อนพัก",
+   note:"2 ชม."},
+  {s:"M",tag:"model",tx:"ArtStation final check",day:"อังคาร",time:"บ่าย",hrs:1,
+   detail:"- เช็ค ArtStation ครั้งสุดท้าย\n- ทุก project มี description + tag ครบ\n- thumbnail ดูดีทุกชิ้น\n- share link สุดท้ายใน social",
+   note:"1 ชม."},
+  {s:"S",tag:"eng",tx:"EN: เขียน reflection 2 เดือน",day:"อังคาร",time:"ดึก",hrs:1,
+   detail:"- เขียน EN: ได้อะไรจาก 2 เดือน / เรียนรู้อะไร / จะทำต่างอะไร\n- ไม่ต้องยาว 200-300 words ก็พอ\n- post หรือเก็บใว้เป็น memory",
+   note:"1 ชม."},
+  {s:"M",tag:"game",tx:"Review 2 เดือน — จด goal ต่อ",day:"พุธ",time:"บ่าย",hrs:2,
+   detail:"- จด: ระบบที่ทำได้ทั้งหมด / สิ่งที่ภูมิใจ / สิ่งที่ยังขาด\n- จด: goal เดือน 3 — full game / หางาน / freelance\n- เลือก direction 1-2 อย่างที่อยากทำต่อ",
+   note:"2 ชม."},
+  {s:"S",tag:"game",tx:"เคลียร์งานและ backup ทุกไฟล์",day:"พุธ",time:"ดึก",hrs:2,
+   detail:"- backup: Blender files + UE5 project + art files\n- อัปโหลด cloud: Google Drive / OneDrive\n- เช็ค: ไม่มีงานค้างอะไรเหลือ\n- ปิดคอมพร้อมเที่ยว!",
+   note:"2 ชม."},
+  {s:"M",tag:"travel",tx:"🎉 เที่ยวยาว 4-5 วัน",day:"พฤหัส",time:"ทั้งวัน",hrs:0,
+   detail:"- ไปที่ที่อยากไป — ไม่เคยไป หรือที่ชอบ\n- ไม่พกคอม ไม่เช็ค task ไม่เช็ค social งาน\n- ถ่ายรูป เก็บ inspiration\n- กินของอร่อย อยู่กับตัวเองหรือคนที่ชอบ\n- คุณทำมันได้ทั้งหมด — deserve it! 🎉",
+   note:"ไม่มี task — แค่สนุก"},
+]},
+
+];
+
+// ── ENGINE ────────────────────────────────────────────────────────────────────
+const SZ={S:{c:"S",h:"1-2 ชม.",v:1.5},M:{c:"M",h:"2-3 ชม.",v:2.5},L:{c:"L",h:"4-6 ชม.",v:5}};
+const TG={
+  model:{c:"t-model",l:"🧊 3D Model",s:"s-model"},
+  game:{c:"t-game",l:"🎮 เกม",s:"s-game"},
+  art:{c:"t-art",l:"🎨 วาดรูป",s:"s-art"},
+  eng:{c:"t-eng",l:"🗣️ English",s:"s-eng"},
+  comm:{c:"t-comm",l:"👥 Community",s:"s-comm"},
+  travel:{c:"t-travel",l:"🚶 เที่ยว",s:"s-travel"},
+};
+const DAYS_ORDER=["จันทร์","อังคาร","พุธ","พฤหัส","ศุกร์","เสาร์","อาทิตย์"];
+const TIME_LABEL={"บ่าย":"บ่าย-เย็น","ดึก":"ดึก","ทั้งวัน":"ทั้งวัน"};
+
+const FILE_ID=location.href.split('/').pop().replace('.html','').replace(/[^a-zA-Z0-9_-]/g,'_')||"index";
+const DB_URL="https://my-plan-6f7da-default-rtdb.firebaseio.com";
+
+// ── Firebase helpers ─────────────────────────────────────────────────────────
+async function fbGet(path){
+  try{const r=await fetch(DB_URL+"/"+path+".json");if(!r.ok)return null;const d=await r.json();return d;}catch{return null;}
+}
+async function fbSet(path,val){
+  try{await fetch(DB_URL+"/"+path+".json",{method:"PUT",headers:{"Content-Type":"application/json"},body:JSON.stringify(val)});}catch{}
+}
+// debounce save ไม่ให้ยิงถี่เกินไป
+const _debMap={};function debounce(key,fn,ms=800){clearTimeout(_debMap[key]);_debMap[key]=setTimeout(fn,ms);}
+
+function lW(){try{const d=localStorage.getItem(FILE_ID+"-w");if(d)return JSON.parse(d);}catch{}return JSON.parse(JSON.stringify(DEF));}
+function sW(){
+  try{localStorage.setItem(FILE_ID+"-w",JSON.stringify(W));}catch{}
+  debounce("W",()=>fbSet(FILE_ID+"/weeks",W));
+}
+function lD(){try{return JSON.parse(localStorage.getItem(FILE_ID+"-d")||"{}");}catch{return{};}}
+function sD(){
+  try{localStorage.setItem(FILE_ID+"-d",JSON.stringify(done));}catch{}
+  debounce("D",()=>fbSet(FILE_ID+"/done",done));
+}
+function getWNote(wi){try{return localStorage.getItem(FILE_ID+"-wn-"+wi)||"";}catch{return "";}}
+function setWNote(wi,v){
+  try{localStorage.setItem(FILE_ID+"-wn-"+wi,v);}catch{}
+  debounce("wn"+wi,()=>fbSet(FILE_ID+"/wnotes/"+wi,v));
+}
+function getDNote(wi,day){try{return localStorage.getItem(FILE_ID+"-dn-"+wi+"-"+day)||"";}catch{return "";}}
+function setDNote(wi,day,v){
+  try{localStorage.setItem(FILE_ID+"-dn-"+wi+"-"+day,v);}catch{}
+  debounce("dn"+wi+day,()=>fbSet(FILE_ID+"/dnotes/"+wi+"_"+day.replace(/[^a-z]/gi,"_"),v));
+}
+
+// โหลดข้อมูลจาก Firebase เมื่อเปิดแอพ
+async function syncFromFirebase(){
+  const[fw,fd,fn]=await Promise.all([
+    fbGet(FILE_ID+"/weeks"),
+    fbGet(FILE_ID+"/done"),
+    fbGet(FILE_ID+"/wnotes"),
+  ]);
+  let changed=false;
+  if(fw&&Array.isArray(fw)){W=fw;try{localStorage.setItem(FILE_ID+"-w",JSON.stringify(W));}catch{}changed=true;}
+  if(fd&&typeof fd==="object"){done=fd;try{localStorage.setItem(FILE_ID+"-d",JSON.stringify(done));}catch{}changed=true;}
+  if(fn&&typeof fn==="object"){
+    Object.entries(fn).forEach(([wi,v])=>{try{localStorage.setItem(FILE_ID+"-wn-"+wi,v);}catch{}});
+    changed=true;
+  }
+  // dnotes
+  const dn=await fbGet(FILE_ID+"/dnotes");
+  if(dn&&typeof dn==="object"){
+    Object.entries(dn).forEach(([k,v])=>{
+      const[wi,...dayParts]=k.split("_");
+      try{localStorage.setItem(FILE_ID+"-dn-"+wi+"-"+dayParts.join("_"),v);}catch{}
+    });
+    changed=true;
+  }
+  if(changed)rAll();
+  // แสดง sync status
+  const el=document.getElementById("sync-status");
+  if(el){el.textContent="✓ synced";el.style.color="var(--gl)";setTimeout(()=>{el.textContent="";},2000);}
+}
+
+let W=lW(),done=lD(),cW=0,cF="all",cV="week";
+const K=(w,i)=>w+"-"+i;
+
+function calcAll(){let t=0,d=0,h=0;W.forEach((w,wi)=>w.tasks.forEach((t2,ti)=>{t++;if(done[K(wi,ti)])d++;else h+=(t2.hrs||SZ[t2.s].v);}));return{t,d,h};}
+function calcW(wi){let t=0,d=0;W[wi].tasks.forEach((x,ti)=>{t++;if(done[K(wi,ti)])d++;});return{t,d};}
+function upS(){
+  const{t,d,h}=calcAll();
+  document.getElementById("sd").textContent=d;
+  document.getElementById("st").textContent=t;
+  document.getElementById("sh").textContent=Math.round(h*10)/10;
+  const p=t?Math.round(d/t*100):0;
+  document.getElementById("sp").textContent=p+"%";
+  document.getElementById("pf").style.width=p+"%";
+  document.getElementById("pp").textContent=p+"%";
+  const{t:wt,d:wd}=calcW(cW);
+  const wp=wt?Math.round(wd/wt*100):0;
+  document.getElementById("wpf").style.width=wp+"%";
+  document.getElementById("wpl").textContent=wp+"%";
+}
+function rWeekNote(){
+  const ta=document.getElementById("week-note-text");
+  if(!ta)return;
+  ta.value=getWNote(cW);
+  ta.oninput=()=>setWNote(cW,ta.value);
+}
+function sf(f,el){cF=f;document.querySelectorAll(".fb").forEach(b=>b.classList.remove("on"));el.classList.add("on");rPool();}
+function setView(v){
+  cV=v;
+  document.getElementById("vb-week").classList.toggle("on",v==="week");
+  document.getElementById("vb-day").classList.toggle("on",v==="day");
+  document.getElementById("filterbar").style.display=v==="week"?"flex":"none";
+  rPool();
+}
+function tog(wi,ti){
+  done[K(wi,ti)]=!done[K(wi,ti)];sD();upS();
+  document.querySelectorAll("[data-k='"+K(wi,ti)+"']").forEach(el=>{
+    el.classList.toggle("done",!!done[K(wi,ti)]);
+    el.classList.toggle("done-day",!!done[K(wi,ti)]);
+  });
+}
+function del(wi,ti){
+  W[wi].tasks.splice(ti,1);
+  const nd={};
+  Object.keys(done).forEach(key=>{
+    const[w,i]=key.split("-").map(Number);
+    if(w===wi&&i===ti)return;
+    nd[w===wi&&i>ti?w+"-"+(i-1):key]=done[key];
+  });
+  done=nd;sW();sD();rPool();upS();
+}
+function mkEdit(el,wi,ti,field,multiline){
+  el.addEventListener("click",()=>{
+    if(el.contentEditable==="true")return;
+    el.contentEditable="true";el.focus();
+    const r=document.createRange();r.selectNodeContents(el);r.collapse(false);
+    window.getSelection().removeAllRanges();window.getSelection().addRange(r);
+    const orig=el.textContent;
+    function fin(){
+      el.contentEditable="false";
+      el.removeEventListener("blur",fin);el.removeEventListener("keydown",kd);
+      const v=el.textContent.trim();
+      if(v){W[wi].tasks[ti][field]=v;sW();}else el.textContent=orig;
+    }
+    function kd(e){
+      if(e.key==="Enter"&&!multiline){e.preventDefault();el.blur();}
+      if(e.key==="Escape"){el.textContent=orig;el.blur();}
+    }
+    el.addEventListener("blur",fin);el.addEventListener("keydown",kd);
+  });
+}
+function showAF(wi,sz){
+  document.querySelectorAll(".af").forEach(f=>f.remove());
+  const row=document.getElementById("ar-"+wi+"-"+sz);if(!row)return;
+  const tagOpts=Object.entries(TG).map(([k,v])=>`<option value="${k}">${v.l}</option>`).join("");
+  const dayOpts=DAYS_ORDER.map(d=>`<option value="${d}">${d}</option>`).join("");
+  const f=document.createElement("div");f.className="af";
+  f.innerHTML=`<textarea id="aftx" placeholder="Task ใหม่..." rows="2"></textarea>
+    <div class="afr">
+      <select id="afsz"><option value="S"${sz==="S"?" selected":""}>S</option><option value="M"${sz==="M"?" selected":""}>M</option><option value="L"${sz==="L"?" selected":""}>L</option></select>
+      <select id="aftg">${tagOpts}</select>
+      <select id="afday">${dayOpts}</select>
+      <select id="aftime"><option value="บ่าย">บ่าย</option><option value="ดึก">ดึก</option><option value="ทั้งวัน">ทั้งวัน</option></select>
+      <input id="afhrs" type="number" placeholder="ชม." step="0.5" min="0" style="flex:0 0 70px">
+    </div>
+    <textarea id="afdetail" placeholder="รายละเอียด (แต่ละขั้นตอน)" rows="3"></textarea>
+    <input id="afnote" type="text" placeholder="note สั้นๆ">
+    <div class="afb">
+      <button onclick="document.querySelectorAll('.af').forEach(f=>f.remove())">ยกเลิก</button>
+      <button class="ok" onclick="confAdd(${wi})">+ เพิ่ม</button>
+    </div>`;
+  row.insertAdjacentElement("afterend",f);
+  document.getElementById("aftx").focus();
+}
+function confAdd(wi){
+  const tx=document.getElementById("aftx").value.trim();if(!tx)return;
+  const s=document.getElementById("afsz").value;
+  const tag=document.getElementById("aftg").value;
+  const day=document.getElementById("afday").value;
+  const time=document.getElementById("aftime").value;
+  const hrs=parseFloat(document.getElementById("afhrs").value)||SZ[s].v;
+  const detail=document.getElementById("afdetail").value.trim();
+  const note=document.getElementById("afnote").value.trim();
+  W[wi].tasks.push({s,tag,tx,day,time,hrs,detail:detail||"",note:note||""});sW();
+  document.querySelectorAll(".af").forEach(f=>f.remove());
+  rPool();upS();
+}
+function cycleTag(wi,ti){
+  const keys=Object.keys(TG);const idx=keys.indexOf(W[wi].tasks[ti].tag);
+  W[wi].tasks[ti].tag=keys[(idx+1)%keys.length];sW();rPool();
+}
+function cycleSz(wi,ti){
+  const szKeys=["S","M","L"];const si=szKeys.indexOf(W[wi].tasks[ti].s);
+  W[wi].tasks[ti].s=szKeys[(si+1)%szKeys.length];sW();rPool();
+}
+function rTabs(){
+  const c=document.getElementById("tabs");c.innerHTML="";
+  W.forEach((w,i)=>{
+    const b=document.createElement("button");
+    b.className="wtab"+(i===cW?" on":"");
+    b.textContent="W"+(i+1);
+    b.title=w.title+" · "+w.dates;
+    b.onclick=()=>{cW=i;rAll();};
+    c.appendChild(b);
+  });
+}
+function rHead(){
+  const h=document.getElementById("whb");
+  h.innerHTML=`<div class="whi"><div class="wnum">WEEK ${cW+1} / 8</div><span class="wtit" id="wte">${W[cW].title}</span><div class="wdates">${W[cW].dates}</div></div>`;
+  const el=document.getElementById("wte");
+  el.addEventListener("click",()=>{
+    if(el.contentEditable==="true")return;
+    el.contentEditable="true";el.focus();
+    const r=document.createRange();r.selectNodeContents(el);r.collapse(false);
+    window.getSelection().removeAllRanges();window.getSelection().addRange(r);
+    const orig=el.textContent;
+    el.addEventListener("blur",function fin(){el.contentEditable="false";el.removeEventListener("blur",fin);const v=el.textContent.trim();if(v){W[cW].title=v;sW();rTabs();}else el.textContent=orig;});
+    el.addEventListener("keydown",function kd(e){if(e.key==="Enter"){e.preventDefault();el.blur();}});
+  });
+}
+function rWarn(){
+  let h=`<div class="warn"><div class="wl">ข้อควรระวัง</div><span class="wt2" id="wwe">${W[cW].warn}</span></div>`;
+  if(W[cW].note)h+=`<div class="note-box"><div class="nl">รายละเอียดสัปดาห์นี้</div><span class="nt" id="wne">${W[cW].note}</span></div>`;
+  document.getElementById("wb").innerHTML=h;
+  function mkW(id,field){
+    const el=document.getElementById(id);if(!el)return;
+    el.addEventListener("click",()=>{
+      if(el.contentEditable==="true")return;
+      el.contentEditable="true";el.focus();
+      const orig=el.textContent;
+      el.addEventListener("blur",function fin(){el.contentEditable="false";el.removeEventListener("blur",fin);const v=el.textContent.trim();if(v){W[cW][field]=v;sW();}else el.textContent=orig;});
+    });
+  }
+  mkW("wwe","warn");mkW("wne","note");
+}
+function rPool(){
+  if(cV==="day"){rDayView();return;}
+  const w=W[cW];let html="";
+  ["L","M","S"].forEach(sz=>{
+    const all=w.tasks.map((t,i)=>({...t,i})).filter(t=>t.s===sz);
+    const vis=all.filter(t=>cF==="all"||t.tag===cF);
+    if(!all.length)return;
+    if(!vis.length&&cF!=="all")return;
+    const dc=all.filter(t=>done[K(cW,t.i)]).length;
+    html+=`<div class="ss"><div class="sh"><span class="sb ${sz}">${sz}</span><span class="si">${SZ[sz].h}</span><span class="sc2">${dc}/${all.length}</span></div><div class="tl">`;
+    vis.forEach(t=>{
+      const isDone=done[K(cW,t.i)]?" done":"";
+      const tg=TG[t.tag]||{c:"",l:"",s:""};
+      html+=`<div class="task${isDone}" data-k="${K(cW,t.i)}">
+        <div class="cb" onclick="tog(${cW},${t.i})"><div class="ck"></div></div>
+        <span class="tx" data-wi="${cW}" data-ti="${t.i}" data-field="tx">${t.tx}</span>
+        <span class="tday">${t.day||""}</span>
+        ${tg.l?`<span class="ttag ${tg.c}" title="คลิกเปลี่ยนหมวด" style="cursor:pointer" onclick="cycleTag(${cW},${t.i})">${tg.l}</span>`:""}
+        <span class="sb ${t.s}" title="คลิกเปลี่ยนขนาด" style="cursor:pointer" onclick="cycleSz(${cW},${t.i})">${t.s}</span>
+        <div class="ta"><button class="ab del" onclick="del(${cW},${t.i})">del</button></div>
+      </div>`;
+    });
+    html+=`</div><div class="ar" id="ar-${cW}-${sz}"><button class="abtn" onclick="showAF(${cW},'${sz}')">+ เพิ่ม Task</button></div></div>`;
+  });
+  if(!html)html=`<div class="empty">ไม่มี Task ที่ตรงกับ filter นี้</div>`;
+  document.getElementById("pool").innerHTML=html;
+  // attach editable to tx spans
+  document.querySelectorAll(".tx[data-wi]").forEach(el=>{
+    const wi=parseInt(el.dataset.wi),ti=parseInt(el.dataset.ti);
+    mkEdit(el,wi,ti,"tx",false);
+  });
+}
+function rDayView(){
+  const w=W[cW];
+  const byDay={};
+  w.tasks.forEach((t,i)=>{
+    const d=t.day||"ไม่ระบุ";
+    if(!byDay[d])byDay[d]=[];
+    byDay[d].push({...t,i});
+  });
+  const orderedDays=DAYS_ORDER.filter(d=>byDay[d]).concat(Object.keys(byDay).filter(d=>!DAYS_ORDER.includes(d)));
+  const pool=document.getElementById("pool");pool.innerHTML="";
+  if(!orderedDays.length){pool.innerHTML=`<div class="empty">ไม่มี Task</div>`;return;}
+  orderedDays.forEach(dayName=>{
+    const tasks=byDay[dayName];
+    const timeOrder=["บ่าย","ทั้งวัน","ดึก"];
+    tasks.sort((a,b)=>timeOrder.indexOf(a.time||"บ่าย")-timeOrder.indexOf(b.time||"บ่าย"));
+    const block=document.createElement("div");block.className="day-block";
+    const hdr=document.createElement("div");hdr.className="day-hdr";
+    hdr.innerHTML=`<span class="day-name">${dayName}</span><span class="day-date">${W[cW].dates}</span>`;
+    block.appendChild(hdr);
+    const tlist=document.createElement("div");tlist.className="day-tasks";
+    tasks.forEach(t=>{
+      const tg=TG[t.tag]||{c:"",l:"",s:"s-travel"};
+      const isDone=done[K(cW,t.i)];
+      const timeLabel=TIME_LABEL[t.time]||t.time||"บ่าย";
+      const row=document.createElement("div");
+      row.className="dtask"+(isDone?" done-day":"");row.dataset.k=K(cW,t.i);
+      // strip
+      const strip=document.createElement("div");strip.className="dtask-strip "+tg.s;row.appendChild(strip);
+      // checkbox
+      const cb=document.createElement("div");cb.className="dtask-cb";
+      const ck=document.createElement("div");ck.className="dtask-ck"+(isDone?" dtask-ck-on":"");
+      cb.appendChild(ck);cb.onclick=()=>tog(cW,t.i);row.appendChild(cb);
+      // time (no icon, no hrs)
+      const timeEl=document.createElement("div");timeEl.className="dtask-time";
+      timeEl.textContent=TIME_LABEL[t.time]||t.time||"บ่าย";
+      row.appendChild(timeEl);
+      // body
+      const body=document.createElement("div");body.className="dtask-body";
+      // label
+      const lbl=document.createElement("div");lbl.className="dtask-label";lbl.textContent=t.tx;
+      mkEdit(lbl,cW,t.i,"tx",false);body.appendChild(lbl);
+      // detail
+      const det=document.createElement("div");det.className="dtask-detail";
+      if(t.detail){det.textContent=t.detail;}
+      else{det.innerHTML='<span style="opacity:.3;font-style:italic">คลิกเพื่อเพิ่มรายละเอียด...</span>';}
+      mkEdit(det,cW,t.i,"detail",true);body.appendChild(det);
+      // meta
+      const meta=document.createElement("div");meta.className="dtask-meta";
+      // tag pill — click to cycle
+      const tagPill=document.createElement("span");
+      tagPill.className="ttag "+(tg.c||"");tagPill.textContent=tg.l||t.tag;
+      tagPill.title="คลิกเปลี่ยนหมวด";tagPill.style.cursor="pointer";
+      tagPill.addEventListener("click",()=>{
+        const keys=Object.keys(TG);const idx=keys.indexOf(W[cW].tasks[t.i].tag);
+        W[cW].tasks[t.i].tag=keys[(idx+1)%keys.length];sW();rPool();
+      });
+      meta.appendChild(tagPill);
+      // size badge — click to cycle
+      const szBadge=document.createElement("span");
+      szBadge.className="sb "+W[cW].tasks[t.i].s;szBadge.textContent=W[cW].tasks[t.i].s;
+      szBadge.title="คลิกเปลี่ยนขนาด";szBadge.style.cursor="pointer";
+      szBadge.addEventListener("click",()=>{
+        const szKeys=["S","M","L"];const si=szKeys.indexOf(W[cW].tasks[t.i].s);
+        W[cW].tasks[t.i].s=szKeys[(si+1)%szKeys.length];sW();rPool();
+      });
+      meta.appendChild(szBadge);
+      // note pill
+      const np=document.createElement("span");
+      np.className="dtask-note-pill"+(t.note?"":" dtask-note-empty");
+      np.textContent=t.note||"+ note";
+      mkEdit(np,cW,t.i,"note",false);
+      meta.appendChild(np);body.appendChild(meta);row.appendChild(body);tlist.appendChild(row);
+    });
+    block.appendChild(tlist);
+    // day personal note
+    const nb=document.createElement("div");nb.className="day-personal-note";
+    const ni=document.createElement("div");ni.className="day-note-inner";
+    const nl=document.createElement("span");nl.className="day-note-label";nl.textContent="โน้ต";
+    const nt=document.createElement("div");nt.className="day-note-text";nt.contentEditable="true";
+    const saved=getDNote(cW,dayName);if(saved)nt.innerText=saved;
+    nt.setAttribute("data-placeholder","จดโน้ตส่วนตัว...");
+    nt.addEventListener("input",()=>setDNote(cW,dayName,nt.innerText.trim()));
+    ni.appendChild(nl);ni.appendChild(nt);nb.appendChild(ni);block.appendChild(nb);
+    pool.appendChild(block);
+  });
+}
+function rAll(){rTabs();rHead();rWarn();rPool();rWeekNote();upS();}
+document.getElementById("fd").textContent=new Date().toLocaleDateString("th-TH",{year:"numeric",month:"long",day:"numeric"});
+rAll();
+syncFromFirebase();
+</script>
+</body>
+</html>
